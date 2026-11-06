@@ -1,0 +1,4 @@
+- insert:
+    - id: ascii-video-background
+      name: dsh-ascii-video-background
+      config: {}

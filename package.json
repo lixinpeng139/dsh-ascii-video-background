@@ -1,0 +1,46 @@
+{
+  "name": "dsh-ascii-video-background",
+  "version": "0.3.0",
+  "private": true,
+  "description": "Live ASCII character-video wallpaper for the DeepSeek Harness Web UI, with a bundled starter video and a Settings page for adding your own.",
+  "type": "module",
+  "main": "./index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lixinpeng139/dsh-ascii-video-background.git"
+  },
+  "homepage": "https://github.com/lixinpeng139/dsh-ascii-video-background#readme",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "assets/whale-loop.mp4",
+    "README.md",
+    "NOTICE.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-layout",
+        "@deepseek-ai/dsh-client-ui-settings"
+      ]
+    }
+  },
+  "license": "GPL-3.0-only"
+}
